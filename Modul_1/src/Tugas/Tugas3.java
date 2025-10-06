@@ -12,10 +12,14 @@ public class Tugas3 {
         System.out.print("Masukkan nilai ujian akhir: ");
         int nilai = scanner.nextInt();
 
-        if (nilai >= 60) {
-            System.out.println("Nama: " + nama + " | Status: Lulus");
+        if(nilai >= 0 && nilai <= 100){
+            if (nilai >= 60) {
+                System.out.println("Nama: " + nama + " | Status: Lulus");
+            } else {
+                System.out.println("Nama: " + nama + " | Status: Tidak Lulus");
+            }
         } else {
-            System.out.println("Nama: " + nama + " | Status: Tidak Lulus");
+            System.out.println("Nilai tidak valid");
         }
 
         scanner.close();

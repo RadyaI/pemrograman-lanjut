@@ -14,7 +14,7 @@ public class Tugas1 {
         }
 
         int total = 0;
-        for (int i = 0; i < n; i++) { //harusnya dimulai dari 0 nih arraynya
+        for (int i = 0; i < n; i++) {
             total += angka[i];
         }
 
