@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class BillCalculator {
-    public static final double SELISIH = 0.001;
     public double t_Bill;
     public int t_People;
     public Person[] persons;
@@ -36,7 +35,7 @@ public class BillCalculator {
                 totalInput = totalInput + a;
             }
 
-            if (Math.abs(totalInput - t_Bill) > SELISIH) {
+            if (Math.abs(totalInput - t_Bill) > 0.001) {
                 System.out.println("\n⚠️ Total yang diinput (" + totalInput +
                         ") tidak sesuai dengan total tagihan (" + t_Bill + ")!");
             } else {

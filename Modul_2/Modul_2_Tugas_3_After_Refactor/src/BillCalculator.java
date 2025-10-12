@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class BillCalculator implements SplitOperation {
+    public static final double TOLERANCE = 0.001;
     public double totalBill;
     public int totalPeople;
     public Person[] persons;
@@ -36,7 +37,7 @@ public class BillCalculator implements SplitOperation {
             totalInput = totalInput + a;
         }
 
-        if (Math.abs(totalInput - totalBill) > 0.001) {
+        if (Math.abs(totalInput - totalBill) > TOLERANCE) {
             System.out.println("\n⚠️ Total yang diinput (" + totalInput +
                     ") tidak sesuai dengan total tagihan (" + totalBill + ")!");
         } else {
