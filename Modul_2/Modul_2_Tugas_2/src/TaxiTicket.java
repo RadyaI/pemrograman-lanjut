@@ -1,34 +1,39 @@
-public class TaxiTicket {
-    public String pName;
-    public String sLocation;
-    public String dest;
-    public double prc;
+import utils.TicketInfo;
+
+public class TaxiTicket extends Ticket implements Operational {
+    public static final double TAX_RATE = 0.1;
+    public String passengerName;
+    public String startLocation;
+    public String destination;
+    public double price;
     private double duration;
     private double speed;
 
     private static final double MIN_SPEED = 5;
     private static final double MAX_SPEED = 100;
 
-    public TaxiTicket(String passengerName, String startLocation, String destination,
-                      double price, double duration, double speed) {
-        this.pName = passengerName;
-        this.sLocation = startLocation;
-        this.dest = destination;
-        this.prc = price;
+    public TaxiTicket(TicketInfo ticketInfo, double duration, double speed) {
+        this.passengerName = ticketInfo.passengerName();
+        this.startLocation = ticketInfo.startLocation();
+        this.destination = ticketInfo.destination();
+        this.price = ticketInfo.price();
         this.duration = duration;
         this.speed = speed;
     }
 
-    public void cS() {
-        System.out.println("Your taxi is heading to " + dest);
+    @Override
+    public void checkStatus() {
+        System.out.println("Your taxi is heading to " + destination);
     }
 
-    public void dED() {
+    @Override
+    public void displayEstimatedDuration() {
         System.out.println("Estimated travel duration: " + duration + " minutes");
     }
 
-    public void dR() {
-        System.out.println("Route: " + sLocation + " -> " + dest);
+    @Override
+    public void displayRoute() {
+        System.out.println("Route: " + startLocation + " -> " + destination);
     }
 
     public void sLowDown(double speedReduction) {
@@ -48,31 +53,22 @@ public class TaxiTicket {
         System.out.println("Taxi sped up! Current speed: " + speed + " km/h");
     }
 
-    public void dI() {
-        System.out.println("Passenger Name : " + pName);
-        System.out.println("Start Location : " + sLocation);
-        System.out.println("Destination    : " + dest);
-        System.out.println("Price          : " + prc);
-        System.out.println("Final Price    : " + (prc + (prc * 0.1))); // Price including 10% tax
+    public void displayInfo() {
+        System.out.println("Passenger Name : " + passengerName);
+        System.out.println("Start Location : " + startLocation);
+        System.out.println("Destination    : " + destination);
+        System.out.println("Price          : " + price);
+        System.out.println("Final Price    : " + calculateFinalPrice()); // Price including 10% tax
+    }
+
+    private double calculateFinalPrice() {
+        return price + (price * TAX_RATE);
     }
 
     public void detailedInfo() {
-        dI();
+        displayInfo();
         System.out.println("Duration       : " + duration + " minutes");
         System.out.println("Speed          : " + speed + " km/h");
     }
 
-    public static void main(String[] args) {
-        TaxiTicket ticket = new TaxiTicket("Alice", "Downtown", "Airport", 50.0, 30.0, 60.0);
-
-        ticket.detailedInfo();
-
-        ticket.cS();
-
-        ticket.dR();
-        ticket.dED();
-
-        ticket.sLowDown(20);
-        ticket.speedUp(15);
-    }
 }

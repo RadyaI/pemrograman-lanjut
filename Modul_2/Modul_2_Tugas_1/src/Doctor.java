@@ -5,7 +5,6 @@ class Doctor {
     private double salary;
     private String specialization;
 
-    // Constructor
     public Doctor(String name, int id, double salary, String specialization) {
         this.name = name;
         this.id = id;
@@ -29,7 +28,6 @@ class Doctor {
         System.out.println("Salary: $" + salary);
     }
 
-    // Update specialization
     public void updateSpecialization(String newSpecialization) {
         specialization = newSpecialization;
         System.out.println("Specialization updated to: " + specialization);
