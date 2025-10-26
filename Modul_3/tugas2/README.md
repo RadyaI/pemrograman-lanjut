@@ -42,7 +42,7 @@ src/
 
 ```
 Radya membayar Rp 120000
-Aini membayar Rp 111231
+Fulan membayar Rp 111231
 ```
 
 **Sama Rata:**
@@ -54,7 +54,4 @@ Budi membayar Rp 25000
 Cici membayar Rp 25000
 ```
 
-## JavaDoc
-
-* Semua class & method terdokumentasi.
-* Generate di IntelliJ: Tools → Generate JavaDoc → pilih folder → OK.
+[Made by Radya](https://radya.vercel.app)

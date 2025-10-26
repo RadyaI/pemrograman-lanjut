@@ -70,11 +70,11 @@ public class BillCalculator implements SplitOperation {
                 System.out.print("Masukkan jumlah bayar " + n + ": ");
                 if (sc.hasNextDouble()) {
                     a = sc.nextDouble();
-                    sc.nextLine(); // buang newline
+                    sc.nextLine();
                     valid = true;
                 } else {
                     System.out.println("⚠️ Input tidak valid! Masukkan angka.");
-                    sc.nextLine(); // buang input salah
+                    sc.nextLine();
                 }
             }
 

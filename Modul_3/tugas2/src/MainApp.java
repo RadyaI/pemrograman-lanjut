@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 /**
  * Kelas MainApp menjalankan aplikasi Split Bill.
  * Aplikasi ini memungkinkan user untuk membagi tagihan
