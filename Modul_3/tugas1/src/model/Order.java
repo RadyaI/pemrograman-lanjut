@@ -32,7 +32,7 @@ public class Order {
     }
 
     public void printReceipt() {
-        System.out.println("\n======= DineSmart Receipt =======");
+        System.out.println("\n======= Receipt =======");
         for (OrderItem item : orderItems) {
             System.out.println(item);
         }

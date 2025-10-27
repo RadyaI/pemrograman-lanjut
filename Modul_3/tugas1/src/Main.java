@@ -7,14 +7,14 @@ public class Main {
         Order order = new Order();
 
         List<MenuItem> menu = List.of(
-                new MenuItem("Nasi Goreng Spesial", 25000),
-                new MenuItem("Mie Ayam Komplit", 20000),
-                new MenuItem("Es Teh Manis", 8000),
-                new MenuItem("Jus Alpukat", 15000),
+                new MenuItem("Nasgor", 25000),
+                new MenuItem("Mie Ayam", 20000),
+                new MenuItem("Es Teh", 8000),
+                new MenuItem("Kupi", 15000),
                 new MenuItem("Ayam Geprek", 22000)
         );
 
-        System.out.println("=== Selamat Datang di DineSmart ===");
+        System.out.println("=== Selamat Datang di Warung ===");
         String next;
         do {
             System.out.println("\nDaftar Menu:");
