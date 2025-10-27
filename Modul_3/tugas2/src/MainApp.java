@@ -23,9 +23,14 @@ public class MainApp {
         System.out.println("===== SPLIT BILL APP =====");
         System.out.println("1. Sama Rata");
         System.out.println("2. Sesuai Porsi");
+        System.out.println("3. Keluar");
         System.out.print("Pilih mode (1/2/3): ");
         int mode = input.nextInt();
         input.nextLine();
+
+        if(mode == 3){
+            System.exit(0);
+        }
 
         System.out.print("Masukkan total tagihan: ");
         double totalBill = input.nextDouble();

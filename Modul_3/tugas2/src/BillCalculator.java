@@ -89,8 +89,6 @@ public class BillCalculator implements SplitOperation {
             System.out.println("\n✅ Total pembayaran sesuai!");
         }
     }
-
-
     /**
      * Pembagian tagihan secara rata.
      *
