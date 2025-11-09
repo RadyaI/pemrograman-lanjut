@@ -1,5 +1,7 @@
+package users;
+
 /**
- * Kelas Person merepresentasikan seorang individu dalam
+ * Kelas users.Person merepresentasikan seorang individu dalam
  * pembagian tagihan, dengan nama dan jumlah bayar.
  */
 public class Person {
@@ -10,7 +12,7 @@ public class Person {
     private double amount;
 
     /**
-     * Konstruktor Person.
+     * Konstruktor users.Person.
      *
      * @param n Nama orang
      * @param a Jumlah bayar

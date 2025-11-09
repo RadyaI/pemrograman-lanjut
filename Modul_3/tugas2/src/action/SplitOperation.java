@@ -1,7 +1,9 @@
+package action;
+
 import java.util.Scanner;
 
 /**
- * Interface SplitOperation mendefinisikan operasi dasar
+ * Interface action.SplitOperation mendefinisikan operasi dasar
  * untuk membagi tagihan di antara beberapa orang.
  *
  * Kelas yang mengimplementasikan interface ini harus menyediakan:

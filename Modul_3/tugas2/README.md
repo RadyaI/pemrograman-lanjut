@@ -1,4 +1,4 @@
-# Split Bill App
+# Split Bill app
 
 ## Deskripsi
 
@@ -13,22 +13,22 @@ Semua kelas dan method sudah didokumentasikan menggunakan JavaDoc.
 
 ```
 src/
- ├─ MainApp.java        // Menjalankan aplikasi
- ├─ BillCalculator.java // Hitung pembagian tagihan
- ├─ Person.java         // Simpan nama & jumlah bayar
- └─ SplitOperation.java // Interface operasi pembagian
+ ├─ app.MainApp.java        // Menjalankan aplikasi
+ ├─ controller.BillCalculator.java // Hitung pembagian tagihan
+ ├─ users.Person.java         // Simpan nama & jumlah bayar
+ └─ action.SplitOperation.java // Interface operasi pembagian
 ```
 
 ## Kelas & Method (Singkat)
 
-* **MainApp:** main() → jalankan aplikasi, input user.
-* **BillCalculator:** inputNamesAndAmounts(), samaRata(), sesuaiPorsi(), showResult().
-* **Person:** getName(), setName(), getAmount(), setAmount().
-* **SplitOperation:** samaRata(), sesuaiPorsi(), showResult().
+* **app.MainApp:** main() → jalankan aplikasi, input user.
+* **controller.BillCalculator:** inputNamesAndAmounts(), samaRata(), sesuaiPorsi(), showResult().
+* **users.Person:** getName(), setName(), getAmount(), setAmount().
+* **action.SplitOperation:** samaRata(), sesuaiPorsi(), showResult().
 
 ## Cara Pakai
 
-1. Jalankan `MainApp.java`.
+1. Jalankan `app.MainApp.java`.
 2. Pilih mode (1 = rata, 2 = sesuai porsi).
 3. Masukkan total tagihan & jumlah orang.
 4. Input nama dan jumlah bayar.

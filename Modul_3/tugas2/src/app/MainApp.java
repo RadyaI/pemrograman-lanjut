@@ -1,6 +1,10 @@
+package app;
+
+import controller.BillCalculator;
+
 import java.util.Scanner;
 /**
- * Kelas MainApp menjalankan aplikasi Split Bill.
+ * Kelas App.MainApp menjalankan aplikasi Split Bill.
  * Aplikasi ini memungkinkan user untuk membagi tagihan
  * antara beberapa orang, baik secara rata maupun sesuai porsi.
  *
@@ -29,6 +33,7 @@ public class MainApp {
         input.nextLine();
 
         if(mode == 3){
+            System.out.println("\nTerima Kasih...");
             System.exit(0);
         }
 

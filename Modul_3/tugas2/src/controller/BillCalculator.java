@@ -1,9 +1,14 @@
+package controller;
+
+import action.SplitOperation;
+import users.Person;
+
 import java.util.Scanner;
 
 /**
- * Kelas BillCalculator digunakan untuk menghitung pembagian tagihan
+ * Kelas controller.BillCalculator digunakan untuk menghitung pembagian tagihan
  * di antara beberapa orang, baik secara rata maupun sesuai porsi.
- * Mengimplementasikan interface SplitOperation.
+ * Mengimplementasikan interface action.SplitOperation.
  */
 public class BillCalculator implements SplitOperation {
     /** Toleransi selisih pembayaran */
@@ -15,14 +20,13 @@ public class BillCalculator implements SplitOperation {
     /** Jumlah orang yang membayar */
     public int totalPeople;
 
-    /** Array objek Person yang menyimpan nama dan jumlah bayar */
+    /** Array objek users.Person yang menyimpan nama dan jumlah bayar */
     public Person[] persons;
 
     /** Mode pembagian tagihan (1 = rata, 2 = sesuai porsi) */
     public int mode;
-
     /**
-     * Konstruktor BillCalculator.
+     * Konstruktor controller.BillCalculator.
      *
      * @param total Total tagihan
      * @param count Jumlah orang
