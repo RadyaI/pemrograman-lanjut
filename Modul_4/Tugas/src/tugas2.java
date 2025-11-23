@@ -13,7 +13,7 @@ public class tugas2 {
         double jumlah = in.nextDouble();
         in.nextLine();
 
-        System.out.print("Masukkan tanggal (dd-MM-yyyy): ");
+        System.out.print("Masukkan   tanggal (dd-MM-yyyy): ");
         String tIn = in.nextLine();
 
         Date tgl = new SimpleDateFormat("dd-MM-yyyy").parse(tIn);
